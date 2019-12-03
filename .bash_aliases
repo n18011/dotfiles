@@ -1,11 +1,12 @@
 #!/bin/bash\n
 
-export PS1='\[\033[1;32m\]\u\[\033[00m\]:\[\033[1;34m\]\w\[\033[1;31m\]$(__git_ps1)\[\033[00m\] \$ '
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+PS1='... $(__git_ps1) ...'
 
 
 # プロンプトに各種情報を表示
-source ~/.git-completion.bash
-source ~/.git-prompt.sh
+source $HOME/.git-completion.bash
+source $HOME/.git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUPSTREAM=1
 GIT_PS1_SHOWUNTRACKEDFILES=
